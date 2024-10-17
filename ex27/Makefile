@@ -12,6 +12,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 ## Rule all ##
 all: $(NAME)
+
 $(NAME): $(OBJ) 
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 

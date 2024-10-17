@@ -1,25 +1,38 @@
-#include <stdio.h> 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cmaciel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 15:24:33 by cmaciel-          #+#    #+#             */
+/*   Updated: 2024/10/17 15:47:25 by cmaciel-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int     ft_sqrt(int nb)
+//#include <stdio.h> 
+
+int	ft_sqrt(int nb)
 {
-	int     i;
-	
+	int	i;
+
 	i = 1;
 	while (i * i <= nb && i <= 46340)
-    {
-        if (i * i == nb)
-            return (i);
-        else
-            i++;        
-    }
+	{
+		if (i * i == nb)
+			return (i);
+		else
+			i++;
+	}
 	return (0);
 }
-
+/*
 int	main (void)
 {
-    int     n;
+    	int     n;
 
-    n = 24;
+	n = 24;
 	printf("%d\n", ft_sqrt(n));
 	return (0);
 }
+*/

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cmaciel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 17:07:22 by cmaciel-          #+#    #+#             */
+/*   Updated: 2024/10/17 17:08:07 by cmaciel-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*#include <unistd.h>
 
 void    ft_putchar(char c)
@@ -24,7 +36,7 @@ void    ft_putnbr(int nbr)
 */
 void	ft_foreach(int *tab, int length, void (*f)(int))
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < length)
@@ -36,7 +48,7 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 /*
 int     main(void) {
     int array[] = {10, 20, 30, 40, 50};
-    int length = sizeof(array) / sizeof(array[0]);
+    int length = sizeof(array) / sizeof(array[0]); arrumar
     ft_foreach(array, length, ft_putnbr);
     return 0;
 }

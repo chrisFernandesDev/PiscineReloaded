@@ -1,15 +1,24 @@
-/*#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cmaciel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 16:00:28 by cmaciel-          #+#    #+#             */
+/*   Updated: 2024/10/17 18:11:58 by cmaciel-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-*/
+//#include <unistd.h>
+
+void	ft_putchar(char c);
+
 void	ft_putstr(char *str)
 {
-    int     i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	while (str[i] != '\0')
 	{
 		ft_putchar(str[i]);

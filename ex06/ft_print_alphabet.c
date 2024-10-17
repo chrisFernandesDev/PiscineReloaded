@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmaciel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 16:45:22 by cmaciel-          #+#    #+#             */
-/*   Updated: 2024/10/17 16:57:40 by cmaciel-         ###   ########.fr       */
+/*   Created: 2024/10/14 15:01:15 by cmaciel-          #+#    #+#             */
+/*   Updated: 2024/10/17 17:39:11 by cmaciel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+//#include <unistd.h>
 
-# define ABS(Value) ((Value) < 0 ? -(Value) : (Value))
+void	ft_putchar(char c);
 
-#endif
+void	ft_print_alphabet(void)
+{
+	char	letter;
+
+	letter = 'a';
+	while (letter <= 'z')
+	{
+		ft_putchar(letter);
+		letter++;
+	}
+}
+/*
+int	main(void)
+{
+	ft_print_alphabet();
+	return (0);
+}
+*/

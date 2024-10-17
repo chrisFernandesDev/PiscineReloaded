@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cmaciel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 17:08:40 by cmaciel-          #+#    #+#             */
+/*   Updated: 2024/10/17 17:09:04 by cmaciel-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*#include <unistd.h>
 #include <stdlib.h>
 
@@ -23,7 +35,7 @@ void    ft_putnbr(int nbr)
     ft_putchar(n % 10 + 48);
 }
 */
-int     ft_count_if(char **tab, int (*f)(char*))
+int	ft_count_if(char **tab, int (*f)(char*))
 {
 	int	i;
 	int	count;
