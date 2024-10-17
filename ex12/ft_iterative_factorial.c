@@ -2,21 +2,25 @@
 
 int     ft_iterative_factorial(int nb)
 {
-    if (nb < 0)
+    int     result;
+
+    result = 1;
+    if (nb < 0 || nb > 13)
         return 0;
-    if (nb == 0 || nb == 1)
+    while (nb >= 1)
     {
-        return 1;
+        result *= nb;
+        nb--;
     }
-    return nb * ft_iterative_factorial(nb - 1);
+    return result;
 }
 /*
 int     main(void)
 {
     int     nb;
 
-    nb = 5;
-    printf("%d", ft_iterative_factorial(nb));
+    nb = 14;
+    printf("%d\n", ft_iterative_factorial(nb));
     return (0);
 }
 */
