@@ -6,7 +6,7 @@
 /*   By: cmaciel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:32:54 by cmaciel-          #+#    #+#             */
-/*   Updated: 2024/10/17 18:31:23 by cmaciel-         ###   ########.fr       */
+/*   Updated: 2024/10/18 13:02:38 by cmaciel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,24 @@ void	ft_display(char *filename)
 	bytes_read = 0;
 	if (file < 0)
 	{
-		write(STDERR_FILENO, "Cannot read file.\n", 19);
+		write(2, "Cannot read file.\n", 18);
 		return ;
 	}
-	//while (read(file, buffer, BUF_SIZE) > 0)
-	//{
-	read(file, buffer, BUF_SIZE);
-	write(STDOUT_FILENO, buffer, BUF_SIZE);
-	//}
+	bytes_read = read(file, buffer, BUF_SIZE);
+	while (bytes_read > 0)
+	{
+		write(1, buffer, bytes_read);
+		bytes_read = read(file, buffer, BUF_SIZE);
+	}
 	close(file);
 }
 
 int	main(int argc, char **argv)
 {
 	if (argc == 1)
-		write(STDERR_FILENO, "File name missing.\n", 20);
+		write(2, "File name missing.\n", 19);
 	else if (argc > 2)
-		write(STDERR_FILENO, "Too many arguments.\n", 21);
+		write(2, "Too many arguments.\n", 20);
 	else
 		ft_display(argv[1]);
 	return (0);
